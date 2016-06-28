@@ -372,8 +372,13 @@ Cards include their own variant classes for quickly changing the `background-col
     </blockquote>
   </div>
 </div>
-  
-<div class="card card-block card-inverse card-dark-1 text-xs-center">
+  <?php
+foreach($color_sets as $set_type => $colors){
+	foreach($colors as $color => $color_props){
+
+echo 
+'
+<div class="card card-block '.( $set_type == 'dark' ? 'card-inverse ' :'').'card-'.$color.' text-xs-center">
 	<blockquote class="card-blockquote">
 	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
 	  <footer>
@@ -382,117 +387,12 @@ Cards include their own variant classes for quickly changing the `background-col
 		</small>
 	  </footer>
 	</blockquote>
-</div> 
-<div class="card card-block card-inverse card-dark-2 text-xs-center">
-	<blockquote class="card-blockquote">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-	  <footer>
-		<small>
-		  Someone famous in <cite title="Source Title">Source Title</cite>
-		</small>
-	  </footer>
-	</blockquote>
-</div> 
-<div class="card card-block card-inverse card-grey-1 text-xs-center">
-	<blockquote class="card-blockquote">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-	  <footer>
-		<small>
-		  Someone famous in <cite title="Source Title">Source Title</cite>
-		</small>
-	  </footer>
-	</blockquote>
-</div> 
-<div class="card card-block card-inverse card-blue-dark text-xs-center">
-	<blockquote class="card-blockquote">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-	  <footer>
-		<small>
-		  Someone famous in <cite title="Source Title">Source Title</cite>
-		</small>
-	  </footer>
-	</blockquote>
-</div> 
-<div class="card card-block card-inverse card-greyblue text-xs-center">
-	<blockquote class="card-blockquote">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-	  <footer>
-		<small>
-		  Someone famous in <cite title="Source Title">Source Title</cite>
-		</small>
-	  </footer>
-	</blockquote>
-</div> 
-<div class="card card-block card-inverse card-greygold text-xs-center">
-	<blockquote class="card-blockquote">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-	  <footer>
-		<small>
-		  Someone famous in <cite title="Source Title">Source Title</cite>
-		</small>
-	  </footer>
-	</blockquote>
-</div> 
-<div class="card card-block card-inverse card-browngrey text-xs-center">
-	<blockquote class="card-blockquote">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-	  <footer>
-		<small>
-		  Someone famous in <cite title="Source Title">Source Title</cite>
-		</small>
-	  </footer>
-	</blockquote>
-</div> 
-<div class="card card-block card-inverse card-purp text-xs-center">
-	<blockquote class="card-blockquote">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-	  <footer>
-		<small>
-		  Someone famous in <cite title="Source Title">Source Title</cite>
-		</small>
-	  </footer>
-	</blockquote>
-</div> 
-<div class="card card-block card-inverse card-greyblue-dark text-xs-center">
-	<blockquote class="card-blockquote">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-	  <footer>
-		<small>
-		  Someone famous in <cite title="Source Title">Source Title</cite>
-		</small>
-	  </footer>
-	</blockquote>
-</div> 
-<div class="card card-block card-inverse card-yellow-grey text-xs-center">
-	<blockquote class="card-blockquote">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-	  <footer>
-		<small>
-		  Someone famous in <cite title="Source Title">Source Title</cite>
-		</small>
-	  </footer>
-	</blockquote>
-</div> 
-<div class="card card-block card-yellow-light text-xs-center">
-	<blockquote class="card-blockquote">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-	  <footer>
-		<small>
-		  Someone famous in <cite title="Source Title">Source Title</cite>
-		</small>
-	  </footer>
-	</blockquote>
-</div> 
-<div class="card card-block card-tufte text-xs-center">
-	<blockquote class="card-blockquote">
-	  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-	  <footer>
-		<small>
-		  Someone famous in <cite title="Source Title">Source Title</cite>
-		</small>
-	  </footer>
-	</blockquote>
-</div> 
+</div> ';
+
+	}
+}
+?>
+
 {% endexample %}
 
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
@@ -551,103 +451,25 @@ In need of a colored card, but not the hefty background colors they bring? Repla
     </blockquote>
   </div>
 </div>
-  
-<div class="card card-outline-dark-1 text-xs-center">
+  <?php
+foreach($color_sets as $set_type => $colors){
+	foreach($colors as $color => $color_props){
+
+echo 
+'
+<div class="card card-outline-'.$color.' text-xs-center">
   <div class="card-block">
     <blockquote class="card-blockquote">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
       <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
     </blockquote>
   </div>
-</div>
-<div class="card card-outline-dark-2 text-xs-center">
-  <div class="card-block">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-outline-grey-1 text-xs-center">
-  <div class="card-block">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-outline-blue-dark text-xs-center">
-  <div class="card-block">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-outline-greyblue text-xs-center">
-  <div class="card-block">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-outline-greygold text-xs-center">
-  <div class="card-block">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-outline-browngrey text-xs-center">
-  <div class="card-block">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-outline-purp text-xs-center">
-  <div class="card-block">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-outline-greyblue-dark text-xs-center">
-  <div class="card-block">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-outline-yellow-grey text-xs-center">
-  <div class="card-block">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-outline-yellow-light text-xs-center">
-  <div class="card-block">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>
-<div class="card card-outline-tufte text-xs-center">
-  <div class="card-block">
-    <blockquote class="card-blockquote">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
-  </div>
-</div>{% endexample %}
+</div>';
+
+	}
+}
+?>
+{% endexample %}
 
 ## Groups
 

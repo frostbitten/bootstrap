@@ -126,42 +126,19 @@
 .card-danger {
   @include card-variant($brand-danger, $brand-danger);
 }
-.card-dark-1 {
-  @include card-variant($brand-dark-1, $brand-dark-1);
+<?php
+foreach($color_sets as $colors){
+	foreach($colors as $color => $color_props){
+
+echo 
+'.card-'.$color.' {
+  @include card-variant($brand-'.$color.', $brand-'.$color.');
 }
-.card-dark-2 {
-  @include card-variant($brand-dark-2, $brand-dark-2);
+';
+
+	}
 }
-.card-grey-1 {
-  @include card-variant($brand-grey-1, $brand-grey-1);
-}
-.card-blue-dark {
-  @include card-variant($brand-blue-dark, $brand-blue-dark);
-}
-.card-greyblue {
-  @include card-variant($brand-greyblue, $brand-greyblue);
-}
-.card-greygold {
-  @include card-variant($brand-greygold, $brand-greygold);
-}
-.card-browngrey {
-  @include card-variant($brand-browngrey, $brand-browngrey);
-}
-.card-purp {
-  @include card-variant($brand-purp, $brand-purp);
-}
-.card-greyblue-dark {
-  @include card-variant($brand-greyblue-dark, $brand-greyblue-dark);
-}
-.card-yellow-grey {
-  @include card-variant($brand-yellow-grey, $brand-yellow-grey);
-}
-.card-yellow-light {
-  @include card-variant($brand-yellow-light, $brand-yellow-light);
-}
-.card-tufte {
-  @include card-variant($brand-tufte, $brand-tufte);
-}
+?>
 
 // Remove all backgrounds
 .card-outline-primary {
@@ -182,42 +159,19 @@
 .card-outline-danger {
   @include card-outline-variant($btn-danger-bg);
 }
-.card-outline-dark-1 {
-  @include card-outline-variant($btn-dark-1-bg);
+<?php
+foreach($color_sets as $colors){
+	foreach($colors as $color => $color_props){
+
+echo 
+'.card-outline-'.$color.' {
+  @include card-outline-variant($btn-'.$color.'-bg);
 }
-.card-outline-dark-2 {
-  @include card-outline-variant($btn-dark-2-bg);
+';
+
+	}
 }
-.card-outline-grey-1 {
-  @include card-outline-variant($btn-grey-1-bg);
-}
-.card-outline-blue-dark {
-  @include card-outline-variant($btn-blue-dark-bg);
-}
-.card-outline-greyblue {
-  @include card-outline-variant($btn-greyblue-bg);
-}
-.card-outline-greygold {
-  @include card-outline-variant($btn-greygold-bg);
-}
-.card-outline-browngrey {
-  @include card-outline-variant($btn-browngrey-bg);
-}
-.card-outline-purp {
-  @include card-outline-variant($btn-purp-bg);
-}
-.card-outline-greyblue-dark {
-  @include card-outline-variant($btn-greyblue-dark-bg);
-}
-.card-outline-yellow-grey {
-  @include card-outline-variant($btn-yellow-grey-bg);
-}
-.card-outline-yellow-light {
-  @include card-outline-variant($btn-yellow-light-bg);
-}
-.card-outline-tufte {
-  @include card-outline-variant($btn-tufte-bg);
-}
+?>
 
 //
 // Inverse text within a card for use with dark backgrounds

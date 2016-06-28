@@ -28,54 +28,20 @@ Alerts are available for any length of text, as well as an optional dismiss butt
 <div class="alert alert-danger" role="alert">
   <strong>Oh snap!</strong> Change a few things up and try submitting again.
 </div>
+<?php
+foreach($color_sets as $set_type => $colors){
+	foreach($colors as $color => $color_props){
 
-<div class="alert alert-dark-1" role="alert">
-  <strong>Something</strong> Something else. Color is: "dark-1"
+echo 
+'
+<div class="alert alert-'.$color.'" role="alert">
+  <strong>Something</strong> Something else. Color is: "'.$color.'"
 </div>
+';
 
-<div class="alert alert-dark-2" role="alert">
-  <strong>Something</strong> Something else. Color is: "dark-2"
-</div>
-
-<div class="alert alert-grey-1" role="alert">
-  <strong>Something</strong> Something else. Color is: "grey-1"
-</div>
-
-<div class="alert alert-blue-dark" role="alert">
-  <strong>Something</strong> Something else. Color is: "blue-dark"
-</div>
-
-<div class="alert alert-greyblue" role="alert">
-  <strong>Something</strong> Something else. Color is: "greyblue"
-</div>
-
-<div class="alert alert-greygold" role="alert">
-  <strong>Something</strong> Something else. Color is: "greygold"
-</div>
-
-<div class="alert alert-browngrey" role="alert">
-  <strong>Something</strong> Something else. Color is: "browngrey"
-</div>
-
-<div class="alert alert-purp" role="alert">
-  <strong>Something</strong> Something else. Color is: "purp"
-</div>
-
-<div class="alert alert-greyblue-dark" role="alert">
-  <strong>Something</strong> Something else. Color is: "greyblue-dark"
-</div>
-
-<div class="alert alert-yellow-grey" role="alert">
-  <strong>Something</strong> Something else. Color is: "yellow-grey"
-</div>
-
-<div class="alert alert-yellow-light" role="alert">
-  <strong>Something</strong> Something else. Color is: "yellow-light"
-</div>
-
-<div class="alert alert-tufte" role="alert">
-  <strong>Something</strong> Something else. Color is: "tufte"
-</div>
+	}
+}
+?>
 {% endexample %}
 
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
@@ -98,54 +64,20 @@ Use the `.alert-link` utility class to quickly provide matching colored links wi
 <div class="alert alert-danger" role="alert">
   <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
 </div>
+<?php
+foreach($color_sets as $set_type => $colors){
+	foreach($colors as $color => $color_props){
 
-<div class="alert alert-dark-1" role="alert">
-  <strong>Something</strong> Something else. Color is: <a href="#" class="alert-link">"dark-1"</a>
+echo 
+'
+<div class="alert alert-'.$color.'" role="alert">
+  <strong>Something</strong> Something else. Color is: <a href="#" class="alert-link">"'.$color.'"</a>
 </div>
+';
 
-<div class="alert alert-dark-2" role="alert">
-  <strong>Something</strong> Something else. Color is: <a href="#" class="alert-link">"dark-2"</a>
-</div>
-
-<div class="alert alert-grey-1" role="alert">
-  <strong>Something</strong> Something else. Color is: <a href="#" class="alert-link">"grey-1"</a>
-</div>
-
-<div class="alert alert-blue-dark" role="alert">
-  <strong>Something</strong> Something else. Color is: <a href="#" class="alert-link">"blue-dark"</a>
-</div>
-
-<div class="alert alert-greyblue" role="alert">
-  <strong>Something</strong> Something else. Color is: <a href="#" class="alert-link">"greyblue"</a>
-</div>
-
-<div class="alert alert-greygold" role="alert">
-  <strong>Something</strong> Something else. Color is: <a href="#" class="alert-link">"greygold"</a>
-</div>
-
-<div class="alert alert-browngrey" role="alert">
-  <strong>Something</strong> Something else. Color is: <a href="#" class="alert-link">"browngrey"</a>
-</div>
-
-<div class="alert alert-purp" role="alert">
-  <strong>Something</strong> Something else. Color is: <a href="#" class="alert-link">"purp"</a>
-</div>
-
-<div class="alert alert-greyblue-dark" role="alert">
-  <strong>Something</strong> Something else. Color is: <a href="#" class="alert-link">"greyblue-dark"</a>
-</div>
-
-<div class="alert alert-yellow-grey" role="alert">
-  <strong>Something</strong> Something else. Color is: <a href="#" class="alert-link">"yellow-grey"</a>
-</div>
-
-<div class="alert alert-yellow-light" role="alert">
-  <strong>Something</strong> Something else. Color is: <a href="#" class="alert-link">"yellow-light"</a>
-</div>
-
-<div class="alert alert-tufte" role="alert">
-  <strong>Something</strong> Something else. Color is: <a href="#" class="alert-link">"tufte"</a>
-</div>
+	}
+}
+?>
 {% endexample %}
 
 ### Additional content

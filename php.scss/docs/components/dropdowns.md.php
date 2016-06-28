@@ -112,9 +112,14 @@ The best part is you can do this with any button variant, too:
     </div>
   </div><!-- /btn-group -->
   
+<?php
+foreach($color_sets as $colors){
+	foreach($colors as $color => $color_props){
 
+echo 
+'
   <div class="btn-group">
-    <button type="button" class="btn btn-dark-1 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">dark-1</button>
+    <button type="button" class="btn btn-'.$color.' dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">'.$color.'</button>
     <div class="dropdown-menu">
       <a class="dropdown-item" href="#">Action</a>
       <a class="dropdown-item" href="#">Another action</a>
@@ -122,117 +127,12 @@ The best part is you can do this with any button variant, too:
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="#">Separated link</a>
     </div>
-  </div><!-- /btn-group -->
-  <div class="btn-group">
-    <button type="button" class="btn btn-dark-2 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">dark-2</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group -->
-  <div class="btn-group">
-    <button type="button" class="btn btn-grey-1 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">grey-1</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group -->
-  <div class="btn-group">
-    <button type="button" class="btn btn-blue-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">blue-dark</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group -->
-  <div class="btn-group">
-    <button type="button" class="btn btn-greyblue dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">greyblue</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group -->
-  <div class="btn-group">
-    <button type="button" class="btn btn-greygold dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">greygold</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group -->
-  <div class="btn-group">
-    <button type="button" class="btn btn-browngrey dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">browngrey</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group -->
-  <div class="btn-group">
-    <button type="button" class="btn btn-purp dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">purp</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group -->
-  <div class="btn-group">
-    <button type="button" class="btn btn-greyblue-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">greyblue-dark</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group -->
-  <div class="btn-group">
-    <button type="button" class="btn btn-yellow-grey dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">yellow-grey</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group -->
-  <div class="btn-group">
-    <button type="button" class="btn btn-yellow-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">yellow-light</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group -->
-  <div class="btn-group">
-    <button type="button" class="btn btn-tufte dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">tufte</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group -->  
+  </div><!-- /btn-group -->';
+
+	}
+}
+?>
+  
   
 </div>
 
@@ -337,10 +237,15 @@ We use this extra class to reduce the horizontal `padding` on either side of the
       <a class="dropdown-item" href="#">Separated link</a>
     </div>
   </div><!-- /btn-group -->
-   
+  <?php
+foreach($color_sets as $colors){
+	foreach($colors as $color => $color_props){
+
+echo 
+' 
   <div class="btn-group">
-    <button type="button" class="btn btn-dark-1">dark-1</button>
-    <button type="button" class="btn btn-dark-1 dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-'.$color.'">'.$color.'</button>
+    <button type="button" class="btn btn-'.$color.' dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="sr-only">Toggle Dropdown</span>
     </button>
     <div class="dropdown-menu">
@@ -350,150 +255,12 @@ We use this extra class to reduce the horizontal `padding` on either side of the
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="#">Separated link</a>
     </div>
-  </div><!-- /btn-group --> 
-  <div class="btn-group">
-    <button type="button" class="btn btn-dark-2">dark-2</button>
-    <button type="button" class="btn btn-dark-2 dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group --> 
-  <div class="btn-group">
-    <button type="button" class="btn btn-grey-1">grey-1</button>
-    <button type="button" class="btn btn-grey-1 dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group --> 
-  <div class="btn-group">
-    <button type="button" class="btn btn-blue-dark">blue-dark</button>
-    <button type="button" class="btn btn-blue-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group --> 
-  <div class="btn-group">
-    <button type="button" class="btn btn-greyblue">greyblue</button>
-    <button type="button" class="btn btn-greyblue dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group --> 
-  <div class="btn-group">
-    <button type="button" class="btn btn-greygold">greygold</button>
-    <button type="button" class="btn btn-greygold dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group --> 
-  <div class="btn-group">
-    <button type="button" class="btn btn-browngrey">browngrey</button>
-    <button type="button" class="btn btn-browngrey dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group --> 
-  <div class="btn-group">
-    <button type="button" class="btn btn-purp">purp</button>
-    <button type="button" class="btn btn-purp dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group --> 
-  <div class="btn-group">
-    <button type="button" class="btn btn-greyblue-dark">greyblue-dark</button>
-    <button type="button" class="btn btn-greyblue-dark dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group --> 
-  <div class="btn-group">
-    <button type="button" class="btn btn-yellow-grey">yellow-grey</button>
-    <button type="button" class="btn btn-yellow-grey dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group --> 
-  <div class="btn-group">
-    <button type="button" class="btn btn-yellow-light">yellow-light</button>
-    <button type="button" class="btn btn-yellow-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group --> 
-  <div class="btn-group">
-    <button type="button" class="btn btn-tufte">tufte</button>
-    <button type="button" class="btn btn-tufte dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="sr-only">Toggle Dropdown</span>
-    </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </div><!-- /btn-group -->  
+  </div><!-- /btn-group -->';
+
+	}
+}
+?>
+  
 </div>
 
 {% highlight html %}

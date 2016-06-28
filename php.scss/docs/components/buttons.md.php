@@ -39,19 +39,17 @@ Bootstrap includes six predefined button styles, each serving its own semantic p
 <button type="button" class="btn btn-link">Link</button>
 
 
+<?php
+foreach($color_sets as $set_type => $colors){
+	foreach($colors as $color => $color_props){
 
-<button type="button" class="btn btn-dark-1">dark-1</button>
-<button type="button" class="btn btn-dark-2">dark-2</button>
-<button type="button" class="btn btn-grey-1">grey-1</button>
-<button type="button" class="btn btn-blue-dark">blue-dark</button>
-<button type="button" class="btn btn-greyblue">greyblue</button>
-<button type="button" class="btn btn-greygold">greygold</button>
-<button type="button" class="btn btn-browngrey">browngrey</button>
-<button type="button" class="btn btn-purp">purp</button>
-<button type="button" class="btn btn-greyblue-dark">greyblue-dark</button>
-<button type="button" class="btn btn-yellow-grey">yellow-grey</button>
-<button type="button" class="btn btn-yellow-light">yellow-light</button>
-<button type="button" class="btn btn-tufte">tufte</button> 
+echo 
+'
+<button type="button" class="btn btn-'.$color.'">'.$color.'</button>';
+
+	}
+}
+?> 
 
 
 {% endexample %}
@@ -85,19 +83,18 @@ In need of a button, but not the hefty background colors they bring? Replace the
 <button type="button" class="btn btn-outline-warning">Warning</button>
 <button type="button" class="btn btn-outline-danger">Danger</button>
 
+<?php
+foreach($color_sets as $set_type => $colors){
+	foreach($colors as $color => $color_props){
 
-<button type="button" class="btn btn-outline-dark-1">dark-1</button>
-<button type="button" class="btn btn-outline-dark-2">dark-2</button>
-<button type="button" class="btn btn-outline-grey-1">grey-1</button>
-<button type="button" class="btn btn-outline-blue-dark">blue-dark</button>
-<button type="button" class="btn btn-outline-greyblue">greyblue</button>
-<button type="button" class="btn btn-outline-greygold">greygold</button>
-<button type="button" class="btn btn-outline-browngrey">browngrey</button>
-<button type="button" class="btn btn-outline-purp">purp</button>
-<button type="button" class="btn btn-outline-greyblue-dark">greyblue-dark</button>
-<button type="button" class="btn btn-outline-yellow-grey">yellow-grey</button>
-<button type="button" class="btn btn-outline-yellow-light">yellow-light</button>
-<button type="button" class="btn btn-outline-tufte">tufte</button>{% endexample %}
+echo 
+'
+<button type="button" class="btn btn-outline-'.$color.'">'.$color.'</button>';
+
+	}
+}
+?>
+{% endexample %}
 
 
 ## Sizes

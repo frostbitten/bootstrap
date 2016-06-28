@@ -19,3 +19,16 @@
 @include bg-variant('.bg-warning', $brand-warning);
 
 @include bg-variant('.bg-danger', $brand-danger);
+
+@include bg-variant('.bg-dark-1', $brand-dark-1);
+@include bg-variant('.bg-dark-2', $brand-dark-2);
+@include bg-variant('.bg-grey-1', $brand-grey-1);
+@include bg-variant('.bg-blue-dark', $brand-blue-dark);
+@include bg-variant('.bg-greyblue', $brand-greyblue);
+@include bg-variant('.bg-greygold', $brand-greygold);
+@include bg-variant('.bg-browngrey', $brand-browngrey);
+@include bg-variant('.bg-purp', $brand-purp);
+@include bg-variant('.bg-yellow-grey', $brand-yellow-grey);
+@include bg-variant('.bg-tufte', $brand-tufte);
+@include bg-variant('.bg-greyblue-dark', $brand-greyblue-dark);
+@include bg-variant('.bg-yellow-light', $brand-yellow-light);

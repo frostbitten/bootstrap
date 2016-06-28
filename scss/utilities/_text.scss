@@ -44,6 +44,20 @@
 
 @include text-emphasis-variant('.text-danger', $brand-danger);
 
+@include text-emphasis-variant('.text-dark-1', $brand-dark-1);
+@include text-emphasis-variant('.text-dark-2', $brand-dark-2);
+@include text-emphasis-variant('.text-grey-1', $brand-grey-1);
+@include text-emphasis-variant('.text-blue-dark', $brand-blue-dark);
+@include text-emphasis-variant('.text-greyblue', $brand-greyblue);
+@include text-emphasis-variant('.text-greygold', $brand-greygold);
+@include text-emphasis-variant('.text-browngrey', $brand-browngrey);
+@include text-emphasis-variant('.text-purp', $brand-purp);
+@include text-emphasis-variant('.text-yellow-grey', $brand-yellow-grey);
+@include text-emphasis-variant('.text-tufte', $brand-tufte);
+@include text-emphasis-variant('.text-greyblue-dark', $brand-greyblue-dark);
+@include text-emphasis-variant('.text-yellow-light', $brand-yellow-light);
+
+
 // Misc
 
 .text-hide {

@@ -53,6 +53,9 @@
 // Utility classes
 @import "utilities";
 
+<?php foreach($more_scss as $scss){
+echo '
+@import "'.$scss.'";';
+}
+?>
 
-@import "loading-spinner";
-@import "loading-bar";

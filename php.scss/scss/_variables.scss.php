@@ -50,18 +50,17 @@ $brand-warning:             #f0ad4e !default;
 $brand-danger:              #d9534f !default;
 $brand-inverse:             $gray-dark !default;
 
-$brand-dark-1:				#25252f !default;
-$brand-dark-2:				#3e4550 !default;
-$brand-grey-1:				#8b8f93 !default;
-$brand-blue-dark:				#0c2448 !default;
-$brand-greyblue:				#565d67 !default;
-$brand-greygold:				#a8b185 !default;
-$brand-browngrey:				#a5a093 !default;
-$brand-purp:				#9f4670 !default;
-$brand-greyblue-dark:				#1f2938 !default;
-$brand-yellow-grey:				rgb(171, 177, 111) !default;
-$brand-yellow-light:				rgb(234, 229, 171) !default;
-$brand-tufte:				#fffff8 !default;
+<?php
+foreach($color_sets as $colors){
+	foreach($colors as $color => $color_props){
+
+echo
+'$brand-'.$color.':				'.$color_props['bg'].' !default;
+';
+
+	}
+}
+?>
 
 // Options
 //
@@ -87,39 +86,14 @@ $spacers: (
     x: 0,
     y: 0
   ),
-
-  "0-1": (
-    x: ($spacer-x * .1),
-    y: ($spacer-y * .1)
-  ),
-  "0-2": (
-    x: ($spacer-x * .2),
-    y: ($spacer-y * .2)
-  ),
-  "0-25": (
-    x: ($spacer-x * .25),
-    y: ($spacer-y * .25)
-  ),
-  "0-5": (
-    x: ($spacer-x * .5),
-    y: ($spacer-y * .5)
-  ),
-  "0-75": (
-    x: ($spacer-x * .75),
-    y: ($spacer-y * .75)
-  ),
-  "4": (
-    x: ($spacer-x * 4),
-    y: ($spacer-y * 4)
-  ),
-  "5": (
-    x: ($spacer-x * 5),
-    y: ($spacer-y * 5)
-  ),
-  "6": (
-    x: ($spacer-x * 6),
-    y: ($spacer-y * 6)
-  ),  1: (
+<?php foreach($spacers as $spacer => $val) {
+echo '
+  "'.$spacer.'": (
+    x: ($spacer-x * '.$val.'),
+    y: ($spacer-y * '.$val.')
+  ),';
+} ?>
+  1: (
     x: $spacer-x,
     y: $spacer-y
   ),
@@ -274,54 +248,20 @@ $btn-danger-color:               #fff !default;
 $btn-danger-bg:                  $brand-danger !default;
 $btn-danger-border:              $btn-danger-bg !default;
 
+<?php
+foreach($color_sets as $set_type => $colors){
+	foreach($colors as $color => $color_props){
 
-$btn-dark-1-color:          #fff !default;
-$btn-dark-1-bg:				$brand-dark-1 !default;
-$btn-dark-1-border:         $btn-dark-1-bg !default;
+echo
+'
+$btn-'.$color.'-color:          '.($set_type =='light'?'#555':'#fff').' !default;
+$btn-'.$color.'-bg:				$brand-'.$color.' !default;
+$btn-'.$color.'-border:         $btn-'.$color.'-bg !default;
+';
 
-$btn-dark-2-color:          #fff !default;
-$btn-dark-2-bg:				$brand-dark-2 !default;
-$btn-dark-2-border:         $btn-dark-2-bg !default;
-
-$btn-grey-1-color:          #fff !default;
-$btn-grey-1-bg:				$brand-grey-1 !default;
-$btn-grey-1-border:         $btn-grey-1-bg !default;
-
-$btn-blue-dark-color:          #fff !default;
-$btn-blue-dark-bg:				$brand-blue-dark !default;
-$btn-blue-dark-border:         $btn-blue-dark-bg !default;
-
-$btn-greyblue-color:          #fff !default;
-$btn-greyblue-bg:				$brand-greyblue !default;
-$btn-greyblue-border:         $btn-greyblue-bg !default;
-
-$btn-greygold-color:          #fff !default;
-$btn-greygold-bg:				$brand-greygold !default;
-$btn-greygold-border:         $btn-greygold-bg !default;
-
-$btn-browngrey-color:          #fff !default;
-$btn-browngrey-bg:				$brand-browngrey !default;
-$btn-browngrey-border:         $btn-browngrey-bg !default;
-
-$btn-purp-color:          #fff !default;
-$btn-purp-bg:				$brand-purp !default;
-$btn-purp-border:         $btn-purp-bg !default;
-
-$btn-greyblue-dark-color:          #fff !default;
-$btn-greyblue-dark-bg:				$brand-greyblue-dark !default;
-$btn-greyblue-dark-border:         $btn-greyblue-dark-bg !default;
-
-$btn-yellow-grey-color:          #fff !default;
-$btn-yellow-grey-bg:				$brand-yellow-grey !default;
-$btn-yellow-grey-border:         $btn-yellow-grey-bg !default;
-
-$btn-yellow-light-color:          #555 !default;
-$btn-yellow-light-bg:				$brand-yellow-light !default;
-$btn-yellow-light-border:         $btn-yellow-light-bg !default;
-
-$btn-tufte-color:          #555 !default;
-$btn-tufte-bg:				$brand-tufte !default;
-$btn-tufte-border:         $btn-tufte-bg !default;
+	}
+}
+?>
 
 
 $btn-link-disabled-color:        $gray-light !default;
@@ -535,54 +475,20 @@ $state-warning-border:           darken($state-warning-bg, 5%) !default;
 $state-danger-text:              #a94442 !default;
 $state-danger-bg:                #f2dede !default;
 $state-danger-border:            darken($state-danger-bg, 5%) !default;
+<?php
+foreach($color_sets as $set_type => $colors){
+	foreach($colors as $color => $color_props){
 
-$state-dark-1-text:              darken($brand-dark-1, 15%) !default;
-$state-dark-1-bg:                lighten($brand-dark-1, 25%) !default;
-$state-dark-1-border:            darken($brand-dark-1, 5%) !default;
+echo
+'
+$state-'.$color.'-text:              darken($brand-'.$color.', 15%) !default;
+$state-'.$color.'-bg:                lighten($brand-'.$color.', 25%) !default;
+$state-'.$color.'-border:            darken($brand-'.$color.', 5%) !default;
+';
 
-$state-dark-2-text:              darken($brand-dark-2, 15%) !default;
-$state-dark-2-bg:                lighten($brand-dark-2, 25%) !default;
-$state-dark-2-border:            darken($brand-dark-2, 5%) !default;
-
-$state-grey-1-text:              darken($brand-grey-1, 15%) !default;
-$state-grey-1-bg:                lighten($brand-grey-1, 25%) !default;
-$state-grey-1-border:            darken($brand-grey-1, 5%) !default;
-
-$state-blue-dark-text:              darken($brand-blue-dark, 15%) !default;
-$state-blue-dark-bg:                lighten($brand-blue-dark, 25%) !default;
-$state-blue-dark-border:            darken($brand-blue-dark, 5%) !default;
-
-$state-greyblue-text:              darken($brand-greyblue, 15%) !default;
-$state-greyblue-bg:                lighten($brand-greyblue, 25%) !default;
-$state-greyblue-border:            darken($brand-greyblue, 5%) !default;
-
-$state-greygold-text:              darken($brand-greygold, 15%) !default;
-$state-greygold-bg:                lighten($brand-greygold, 25%) !default;
-$state-greygold-border:            darken($brand-greygold, 5%) !default;
-
-$state-browngrey-text:              darken($brand-browngrey, 15%) !default;
-$state-browngrey-bg:                lighten($brand-browngrey, 25%) !default;
-$state-browngrey-border:            darken($brand-browngrey, 5%) !default;
-
-$state-purp-text:              darken($brand-purp, 15%) !default;
-$state-purp-bg:                lighten($brand-purp, 25%) !default;
-$state-purp-border:            darken($brand-purp, 5%) !default;
-
-$state-greyblue-dark-text:              darken($brand-greyblue-dark, 15%) !default;
-$state-greyblue-dark-bg:                lighten($brand-greyblue-dark, 25%) !default;
-$state-greyblue-dark-border:            darken($brand-greyblue-dark, 5%) !default;
-
-$state-yellow-grey-text:              darken($brand-yellow-grey, 15%) !default;
-$state-yellow-grey-bg:                lighten($brand-yellow-grey, 25%) !default;
-$state-yellow-grey-border:            darken($brand-yellow-grey, 5%) !default;
-
-$state-yellow-light-text:              darken($brand-yellow-light, 15%) !default;
-$state-yellow-light-bg:                lighten($brand-yellow-light, 25%) !default;
-$state-yellow-light-border:            darken($brand-yellow-light, 5%) !default;
-
-$state-tufte-text:              darken($brand-tufte, 15%) !default;
-$state-tufte-bg:                lighten($brand-tufte, 25%) !default;
-$state-tufte-border:            darken($brand-tufte, 5%) !default;
+	}
+}
+?>
 
 // Cards
 $card-spacer-x:            1.25rem !default;
@@ -631,30 +537,18 @@ $tag-info-bg:               $brand-info !default;
 $tag-warning-bg:            $brand-warning !default;
 $tag-danger-bg:             $brand-danger !default;
 
+<?php
+foreach($color_sets as $set_type => $colors){
+	foreach($colors as $color => $color_props){
 
-$tag-dark-1-bg:             $brand-dark-1 !default;
+echo
+'
+$tag-'.$color.'-bg:             $brand-'.$color.' !default;
+';
 
-$tag-dark-2-bg:             $brand-dark-2 !default;
-
-$tag-grey-1-bg:             $brand-grey-1 !default;
-
-$tag-blue-dark-bg:             $brand-blue-dark !default;
-
-$tag-greyblue-bg:             $brand-greyblue !default;
-
-$tag-greygold-bg:             $brand-greygold !default;
-
-$tag-browngrey-bg:             $brand-browngrey !default;
-
-$tag-purp-bg:             $brand-purp !default;
-
-$tag-greyblue-dark-bg:             $brand-greyblue-dark !default;
-
-$tag-yellow-grey-bg:             $brand-yellow-grey !default;
-
-$tag-yellow-light-bg:             $brand-yellow-light !default;
-
-$tag-tufte-bg:             $brand-tufte !default;
+	}
+}
+?>
 
 
 $tag-color:                 #fff !default;
@@ -708,54 +602,20 @@ $alert-danger-bg:             $state-danger-bg !default;
 $alert-danger-text:           $state-danger-text !default;
 $alert-danger-border:         $state-danger-border !default;
 
+<?php
+foreach($color_sets as $set_type => $colors){
+	foreach($colors as $color => $color_props){
 
-$alert-dark-1-bg:             $state-dark-1-bg !default;
-$alert-dark-1-text:           $state-dark-1-text !default;
-$alert-dark-1-border:         $state-dark-1-border !default;
+echo
+'
+$alert-'.$color.'-bg:             $state-'.$color.'-bg !default;
+$alert-'.$color.'-text:           $state-'.$color.'-text !default;
+$alert-'.$color.'-border:         $state-'.$color.'-border !default;
+';
 
-$alert-dark-2-bg:             $state-dark-2-bg !default;
-$alert-dark-2-text:           $state-dark-2-text !default;
-$alert-dark-2-border:         $state-dark-2-border !default;
-
-$alert-grey-1-bg:             $state-grey-1-bg !default;
-$alert-grey-1-text:           $state-grey-1-text !default;
-$alert-grey-1-border:         $state-grey-1-border !default;
-
-$alert-blue-dark-bg:             $state-blue-dark-bg !default;
-$alert-blue-dark-text:           $state-blue-dark-text !default;
-$alert-blue-dark-border:         $state-blue-dark-border !default;
-
-$alert-greyblue-bg:             $state-greyblue-bg !default;
-$alert-greyblue-text:           $state-greyblue-text !default;
-$alert-greyblue-border:         $state-greyblue-border !default;
-
-$alert-greygold-bg:             $state-greygold-bg !default;
-$alert-greygold-text:           $state-greygold-text !default;
-$alert-greygold-border:         $state-greygold-border !default;
-
-$alert-browngrey-bg:             $state-browngrey-bg !default;
-$alert-browngrey-text:           $state-browngrey-text !default;
-$alert-browngrey-border:         $state-browngrey-border !default;
-
-$alert-purp-bg:             $state-purp-bg !default;
-$alert-purp-text:           $state-purp-text !default;
-$alert-purp-border:         $state-purp-border !default;
-
-$alert-greyblue-dark-bg:             $state-greyblue-dark-bg !default;
-$alert-greyblue-dark-text:           $state-greyblue-dark-text !default;
-$alert-greyblue-dark-border:         $state-greyblue-dark-border !default;
-
-$alert-yellow-grey-bg:             $state-yellow-grey-bg !default;
-$alert-yellow-grey-text:           $state-yellow-grey-text !default;
-$alert-yellow-grey-border:         $state-yellow-grey-border !default;
-
-$alert-yellow-light-bg:             $state-yellow-light-bg !default;
-$alert-yellow-light-text:           $state-yellow-light-text !default;
-$alert-yellow-light-border:         $state-yellow-light-border !default;
-
-$alert-tufte-bg:             $state-tufte-bg !default;
-$alert-tufte-text:           $state-tufte-text !default;
-$alert-tufte-border:         $state-tufte-border !default;
+	}
+}
+?>
 
 // Progress bars
 $progress-bg:                 #eee !default;

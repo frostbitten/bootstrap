@@ -29,19 +29,18 @@ Add any of the below mentioned modifier classes to change the appearance of a ta
 <span class="tag tag-success">Success</span>
 <span class="tag tag-info">Info</span>
 <span class="tag tag-warning">Warning</span>
+<?php
+foreach($color_sets as $colors){
+	foreach($colors as $color => $color_props){
 
-<span class="tag tag-dark-1">dark-1</span>
-<span class="tag tag-dark-2">dark-2</span>
-<span class="tag tag-grey-1">grey-1</span>
-<span class="tag tag-blue-dark">blue-dark</span>
-<span class="tag tag-greyblue">greyblue</span>
-<span class="tag tag-greygold">greygold</span>
-<span class="tag tag-browngrey">browngrey</span>
-<span class="tag tag-purp">purp</span>
-<span class="tag tag-greyblue-dark">greyblue-dark</span>
-<span class="tag tag-yellow-grey">yellow-grey</span>
-<span class="tag tag-yellow-light">yellow-light</span>
-<span class="tag tag-tufte">tufte</span>{% endexample %}
+echo 
+'
+<span class="tag tag-'.$color.'">'.$color.'</span>';
+
+	}
+}
+?>
+{% endexample %}
 
 {% capture callout-include %}{% include callout-warning-color-assistive-technologies.md %}{% endcapture %}
 {{ callout-include | markdownify }}
@@ -57,16 +56,15 @@ Use the `.tag-pill` modifier class to make tags more rounded (with a larger `bor
 <span class="tag tag-pill tag-info">Info</span>
 <span class="tag tag-pill tag-warning">Warning</span>
 <span class="tag tag-pill tag-danger">Danger</span>
+<?php
+foreach($color_sets as $colors){
+	foreach($colors as $color => $color_props){
 
-<span class="tag tag-pill tag-dark-1">dark-1</span>
-<span class="tag tag-pill tag-dark-2">dark-2</span>
-<span class="tag tag-pill tag-grey-1">grey-1</span>
-<span class="tag tag-pill tag-blue-dark">blue-dark</span>
-<span class="tag tag-pill tag-greyblue">greyblue</span>
-<span class="tag tag-pill tag-greygold">greygold</span>
-<span class="tag tag-pill tag-browngrey">browngrey</span>
-<span class="tag tag-pill tag-purp">purp</span>
-<span class="tag tag-pill tag-greyblue-dark">greyblue-dark</span>
-<span class="tag tag-pill tag-yellow-grey">yellow-grey</span>
-<span class="tag tag-pill tag-yellow-light">yellow-light</span>
-<span class="tag tag-pill tag-tufte">tufte</span>{% endexample %}
+echo 
+'
+<span class="tag tag-pill tag-'.$color.'">'.$color.'</span>';
+
+	}
+}
+?>
+{% endexample %}

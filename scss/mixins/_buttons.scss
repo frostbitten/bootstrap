@@ -70,12 +70,14 @@
         border-color: $color;
   }
 
+
   &:focus,
   &.focus {
     color: #fff;
     background-color: $color;
         border-color: $color;
   }
+
 
   &:active,
   &.active,

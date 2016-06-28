@@ -1,0 +1,148 @@
+
+ // *  LOADING SPINNER
+ // *
+ // *  Markdown:
+ // *  ---------
+ // *  <div class='loading-spinner'>
+ // *    <span></span>
+ // *    <span></span>
+ // *    <span></span>
+ // *    <span></span>
+ // *  </div>
+ // *
+
+.loading-spinner {;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  margin-left: -15px;
+  animation: rotateLoader 4s infinite;
+  animation-timing-function: ease-in-out;
+
+  span {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border: 5px solid;
+    border-radius: 100%;
+    animation-timing-function: ease-in-out;
+
+    &:nth-child(1) {
+      top: 0;
+      left: 0;
+      transform: translate3d(5px, 5px, 0);
+      animation: translateBall1 1s infinite;
+    }
+
+    &:nth-child(2) {
+      top: 0;
+      right: 0;
+      animation: translateBall2 1s infinite;
+    }
+
+    &:nth-child(3) {
+      right: 0;
+      bottom: 0;
+      animation: translateBall3 1s infinite;
+    }
+
+    &:nth-child(4) {
+      bottom: 0;
+      left: 0;
+      animation: translateBall4 1s infinite;
+    }
+  }
+
+  &.is-relative {
+    position: relative;
+    top: auto;
+    left: auto;
+    z-index: 1;
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+@keyframes rotateLoader {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes translateBall1 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(4px, 4px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes translateBall2 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-4px, 4px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes translateBall3 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-4px, -4px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes translateBall4 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(4px, -4px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+

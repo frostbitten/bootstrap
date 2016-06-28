@@ -54,3 +54,51 @@
 .alert-danger {
   @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
 }
+
+.alert-dark-1 {
+  @include alert-variant($alert-dark-1-bg, $alert-dark-1-border, $alert-dark-1-text);
+}
+
+.alert-dark-2 {
+  @include alert-variant($alert-dark-2-bg, $alert-dark-2-border, $alert-dark-2-text);
+}
+
+.alert-grey-1 {
+  @include alert-variant($alert-grey-1-bg, $alert-grey-1-border, $alert-grey-1-text);
+}
+
+.alert-blue-dark {
+  @include alert-variant($alert-blue-dark-bg, $alert-blue-dark-border, $alert-blue-dark-text);
+}
+
+.alert-greyblue {
+  @include alert-variant($alert-greyblue-bg, $alert-greyblue-border, $alert-greyblue-text);
+}
+
+.alert-greygold {
+  @include alert-variant($alert-greygold-bg, $alert-greygold-border, $alert-greygold-text);
+}
+
+.alert-browngrey {
+  @include alert-variant($alert-browngrey-bg, $alert-browngrey-border, $alert-browngrey-text);
+}
+
+.alert-purp {
+  @include alert-variant($alert-purp-bg, $alert-purp-border, $alert-purp-text);
+}
+
+.alert-greyblue-dark {
+  @include alert-variant($alert-greyblue-dark-bg, $alert-greyblue-dark-border, $alert-greyblue-dark-text);
+}
+
+.alert-yellow-grey {
+  @include alert-variant($alert-yellow-grey-bg, $alert-yellow-grey-border, $alert-yellow-grey-text);
+}
+
+.alert-yellow-light {
+  @include alert-variant($alert-yellow-light-bg, $alert-yellow-light-border, $alert-yellow-light-text);
+}
+
+.alert-tufte {
+  @include alert-variant($alert-tufte-bg, $alert-tufte-border, $alert-tufte-text);
+}

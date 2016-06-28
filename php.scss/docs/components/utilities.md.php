@@ -158,19 +158,18 @@ Convey meaning through color with a handful of emphasis utility classes. These m
 <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
 <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
 <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+<?php
+foreach($color_sets as $colors){
+	foreach($colors as $color => $color_props){
 
-<p class="text-dark-1">Donec ullamcorper nulla non metus auctor fringilla.</p>
-<p class="text-dark-2">Donec ullamcorper nulla non metus auctor fringilla.</p>
-<p class="text-grey-1">Donec ullamcorper nulla non metus auctor fringilla.</p>
-<p class="text-blue-dark">Donec ullamcorper nulla non metus auctor fringilla.</p>
-<p class="text-greyblue">Donec ullamcorper nulla non metus auctor fringilla.</p>
-<p class="text-greygold">Donec ullamcorper nulla non metus auctor fringilla.</p>
-<p class="text-browngrey">Donec ullamcorper nulla non metus auctor fringilla.</p>
-<p class="text-purp">Donec ullamcorper nulla non metus auctor fringilla.</p>
-<p class="text-greyblue-dark">Donec ullamcorper nulla non metus auctor fringilla.</p>
-<p class="text-yellow-grey">Donec ullamcorper nulla non metus auctor fringilla.</p>
-<p class="text-yellow-light">Donec ullamcorper nulla non metus auctor fringilla.</p>
-<p class="text-tufte">Donec ullamcorper nulla non metus auctor fringilla.</p>{% endexample %}
+echo 
+'
+<p class="text-'.$color.'">Donec ullamcorper nulla non metus auctor fringilla.</p>';
+
+	}
+}
+?>
+{% endexample %}
 
 Contextual text classes also work well on anchors with the provided hover and focus states.
 
@@ -181,19 +180,18 @@ Contextual text classes also work well on anchors with the provided hover and fo
 <a href="#" class="text-info">Info link</a>
 <a href="#" class="text-warning">Warning link</a>
 <a href="#" class="text-danger">Danger link</a>
+<?php
+foreach($color_sets as $colors){
+	foreach($colors as $color => $color_props){
 
-<a href="#" class="text-dark-1">dark-1 link</a>
-<a href="#" class="text-dark-2">dark-2 link</a>
-<a href="#" class="text-grey-1">grey-1 link</a>
-<a href="#" class="text-blue-dark">blue-dark link</a>
-<a href="#" class="text-greyblue">greyblue link</a>
-<a href="#" class="text-greygold">greygold link</a>
-<a href="#" class="text-browngrey">browngrey link</a>
-<a href="#" class="text-purp">purp link</a>
-<a href="#" class="text-greyblue-dark">greyblue-dark link</a>
-<a href="#" class="text-yellow-grey">yellow-grey link</a>
-<a href="#" class="text-yellow-light">yellow-light link</a>
-<a href="#" class="text-tufte">tufte link</a>{% endexample %}
+echo 
+'
+<a href="#" class="text-'.$color.'">'.$color.' link</a>';
+
+	}
+}
+?>
+{% endexample %}
 
 Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes.
 
@@ -203,19 +201,19 @@ Similar to the contextual text color classes, easily set the background of an el
 <div class="bg-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</div>
 <div class="bg-warning">Etiam porta sem malesuada magna mollis euismod.</div>
 <div class="bg-danger">Donec ullamcorper nulla non metus auctor fringilla.</div>
+<?php
+foreach($color_sets as $set_type => $colors){
+	// if($set_type == "light")
+	foreach($colors as $color => $color_props){
 
-<div class="bg-dark-1">Donec ullamcorper nulla non metus auctor fringilla.</div>
-<div class="bg-dark-2">Donec ullamcorper nulla non metus auctor fringilla.</div>
-<div class="bg-grey-1">Donec ullamcorper nulla non metus auctor fringilla.</div>
-<div class="bg-blue-dark">Donec ullamcorper nulla non metus auctor fringilla.</div>
-<div class="bg-greyblue">Donec ullamcorper nulla non metus auctor fringilla.</div>
-<div class="bg-greygold">Donec ullamcorper nulla non metus auctor fringilla.</div>
-<div class="bg-browngrey">Donec ullamcorper nulla non metus auctor fringilla.</div>
-<div class="bg-purp">Donec ullamcorper nulla non metus auctor fringilla.</div>
-<div class="bg-greyblue-dark">Donec ullamcorper nulla non metus auctor fringilla.</div>
-<div class="bg-yellow-grey">Donec ullamcorper nulla non metus auctor fringilla.</div>
-<div class="bg-yellow-light">Donec ullamcorper nulla non metus auctor fringilla.</div>
-<div class="bg-tufte">Donec ullamcorper nulla non metus auctor fringilla.</div><div class="bg-inverse">Cras mattis consectetur purus sit amet fermentum.</div>
+echo 
+'
+<div class="bg-'.$color.'">Donec ullamcorper nulla non metus auctor fringilla.</div>';
+
+	}
+}
+?>
+<div class="bg-inverse">Cras mattis consectetur purus sit amet fermentum.</div>
 {% endexample %}
 
 {% callout info %}

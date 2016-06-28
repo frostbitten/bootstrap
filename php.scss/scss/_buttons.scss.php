@@ -79,42 +79,19 @@ fieldset[disabled] a.btn {
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
 
-.btn-dark-1 {
-  @include button-variant($btn-dark-1-color, $btn-dark-1-bg, $btn-dark-1-border);
+<?php
+foreach($color_sets as $colors){
+	foreach($colors as $color => $color_props){
+
+echo 
+'.btn-'.$color.' {
+  @include button-variant($btn-'.$color.'-color, $btn-'.$color.'-bg, $btn-'.$color.'-border);
 }
-.btn-dark-2 {
-  @include button-variant($btn-dark-2-color, $btn-dark-2-bg, $btn-dark-2-border);
+';
+
+	}
 }
-.btn-grey-1 {
-  @include button-variant($btn-grey-1-color, $btn-grey-1-bg, $btn-grey-1-border);
-}
-.btn-blue-dark {
-  @include button-variant($btn-blue-dark-color, $btn-blue-dark-bg, $btn-blue-dark-border);
-}
-.btn-greyblue {
-  @include button-variant($btn-greyblue-color, $btn-greyblue-bg, $btn-greyblue-border);
-}
-.btn-greygold {
-  @include button-variant($btn-greygold-color, $btn-greygold-bg, $btn-greygold-border);
-}
-.btn-browngrey {
-  @include button-variant($btn-browngrey-color, $btn-browngrey-bg, $btn-browngrey-border);
-}
-.btn-purp {
-  @include button-variant($btn-purp-color, $btn-purp-bg, $btn-purp-border);
-}
-.btn-greyblue-dark {
-  @include button-variant($btn-greyblue-dark-color, $btn-greyblue-dark-bg, $btn-greyblue-dark-border);
-}
-.btn-yellow-grey {
-  @include button-variant($btn-yellow-grey-color, $btn-yellow-grey-bg, $btn-yellow-grey-border);
-}
-.btn-yellow-light {
-  @include button-variant($btn-yellow-light-color, $btn-yellow-light-bg, $btn-yellow-light-border);
-}
-.btn-tufte {
-  @include button-variant($btn-tufte-color, $btn-tufte-bg, $btn-tufte-border);
-}
+?>
 
 
 
@@ -138,42 +115,19 @@ fieldset[disabled] a.btn {
   @include button-outline-variant($btn-danger-bg);
 }
 
-.btn-outline-dark-1 {
-  @include button-outline-variant($btn-dark-1-bg);
+<?php
+foreach($color_sets as $colors){
+	foreach($colors as $color => $color_props){
+
+echo 
+'.btn-outline-'.$color.' {
+  @include button-outline-variant($btn-'.$color.'-bg);
 }
-.btn-outline-dark-2 {
-  @include button-outline-variant($btn-dark-2-bg);
+';
+
+	}
 }
-.btn-outline-grey-1 {
-  @include button-outline-variant($btn-grey-1-bg);
-}
-.btn-outline-blue-dark {
-  @include button-outline-variant($btn-blue-dark-bg);
-}
-.btn-outline-greyblue {
-  @include button-outline-variant($btn-greyblue-bg);
-}
-.btn-outline-greygold {
-  @include button-outline-variant($btn-greygold-bg);
-}
-.btn-outline-browngrey {
-  @include button-outline-variant($btn-browngrey-bg);
-}
-.btn-outline-purp {
-  @include button-outline-variant($btn-purp-bg);
-}
-.btn-outline-greyblue-dark {
-  @include button-outline-variant($btn-greyblue-dark-bg);
-}
-.btn-outline-yellow-grey {
-  @include button-outline-variant($btn-yellow-grey-bg);
-}
-.btn-outline-yellow-light {
-  @include button-outline-variant($btn-yellow-light-bg);
-}
-.btn-outline-tufte {
-  @include button-outline-variant($btn-tufte-bg);
-}
+?>
 
 
 

@@ -76,40 +76,17 @@ a.tag {
   @include tag-variant($tag-danger-bg);
 }
 
-.tag-dark-1 {
-  @include tag-variant($tag-dark-1-bg);
+<?php
+foreach($color_sets as $colors){
+	foreach($colors as $color => $color_props){
+
+echo 
+'.tag-'.$color.' {
+  @include tag-variant($tag-'.$color.'-bg);
 }
-.tag-dark-2 {
-  @include tag-variant($tag-dark-2-bg);
+';
+
+	}
 }
-.tag-grey-1 {
-  @include tag-variant($tag-grey-1-bg);
-}
-.tag-blue-dark {
-  @include tag-variant($tag-blue-dark-bg);
-}
-.tag-greyblue {
-  @include tag-variant($tag-greyblue-bg);
-}
-.tag-greygold {
-  @include tag-variant($tag-greygold-bg);
-}
-.tag-browngrey {
-  @include tag-variant($tag-browngrey-bg);
-}
-.tag-purp {
-  @include tag-variant($tag-purp-bg);
-}
-.tag-greyblue-dark {
-  @include tag-variant($tag-greyblue-dark-bg);
-}
-.tag-yellow-grey {
-  @include tag-variant($tag-yellow-grey-bg);
-}
-.tag-yellow-light {
-  @include tag-variant($tag-yellow-light-bg);
-}
-.tag-tufte {
-  @include tag-variant($tag-tufte-bg);
-}
+?>
 
